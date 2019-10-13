@@ -86,7 +86,7 @@
 </package>
 </packages>
 <symbols>
-<symbol name="DM5441A">
+<symbol name="74HC595">
 <wire x1="-10.16" y1="22.86" x2="-10.16" y2="-25.4" width="0.254" layer="94"/>
 <wire x1="-10.16" y1="-25.4" x2="10.16" y2="-25.4" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-25.4" x2="10.16" y2="22.86" width="0.254" layer="94"/>
@@ -104,52 +104,52 @@
 <text x="15.2345" y="-4.82406875" size="1.778640625" layer="97">12</text>
 <text x="15.2385" y="-9.905" size="1.77816875" layer="97">11</text>
 <text x="15.2334" y="7.8829" size="1.77876875" layer="97">14</text>
-<text x="-5.59366875" y="-27.9683" size="1.7798" layer="97">DM5441A</text>
-<pin name="IN_D" x="-15.24" y="2.54" length="middle"/>
-<pin name="IN_A" x="-15.24" y="7.62" length="middle"/>
-<pin name="OUT_9" x="-15.24" y="12.7" length="middle"/>
-<pin name="OUT_8" x="-15.24" y="17.78" length="middle"/>
-<pin name="OUT_1" x="15.24" y="12.7" length="middle" rot="R180"/>
-<pin name="VCC" x="-15.24" y="-5.08" length="middle"/>
-<pin name="IN_B" x="-15.24" y="-10.16" length="middle"/>
-<pin name="IN_C" x="-15.24" y="-15.24" length="middle"/>
-<pin name="OUT_3" x="15.24" y="-20.32" length="middle" rot="R180"/>
-<pin name="OUT_6" x="15.24" y="-10.16" length="middle" function="clk" rot="R180"/>
-<pin name="GND" x="15.24" y="-5.08" length="middle" direction="in" function="clk" rot="R180"/>
-<pin name="OUT_2" x="-15.24" y="-20.32" length="middle"/>
-<pin name="OUT_7" x="15.24" y="-15.24" length="middle" function="dot" rot="R180"/>
-<pin name="OUT_5" x="15.24" y="7.62" length="middle" rot="R180"/>
-<pin name="OUT_4" x="15.24" y="2.54" length="middle" function="dot" rot="R180"/>
-<pin name="OUT_0" x="15.24" y="17.78" length="middle" rot="R180"/>
+<text x="-5.59366875" y="-27.9683" size="1.7798" layer="97">74HC595</text>
+<pin name="QE" x="-15.24" y="2.54" length="middle"/>
+<pin name="QD" x="-15.24" y="7.62" length="middle"/>
+<pin name="QC" x="-15.24" y="12.7" length="middle"/>
+<pin name="QB" x="-15.24" y="17.78" length="middle"/>
+<pin name="QA" x="15.24" y="12.7" length="middle" rot="R180"/>
+<pin name="QF" x="-15.24" y="-5.08" length="middle"/>
+<pin name="QG" x="-15.24" y="-10.16" length="middle"/>
+<pin name="QH" x="-15.24" y="-15.24" length="middle"/>
+<pin name="QH*" x="15.24" y="-20.32" length="middle" rot="R180"/>
+<pin name="SRCLK" x="15.24" y="-10.16" length="middle" function="clk" rot="R180"/>
+<pin name="RCLK" x="15.24" y="-5.08" length="middle" direction="in" function="clk" rot="R180"/>
+<pin name="GND" x="-15.24" y="-20.32" length="middle"/>
+<pin name="SRCLR" x="15.24" y="-15.24" length="middle" function="dot" rot="R180"/>
+<pin name="SER" x="15.24" y="7.62" length="middle" rot="R180"/>
+<pin name="OE" x="15.24" y="2.54" length="middle" function="dot" rot="R180"/>
+<pin name="VCC" x="15.24" y="17.78" length="middle" rot="R180"/>
 <text x="15.2258" y="-14.9999" size="1.77965" layer="97">10</text>
 <text x="-15.2542" y="-20.0799" size="1.77965" layer="97">8</text>
 <text x="15.2334" y="12.9629" size="1.77876875" layer="97">15</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="DM5441A">
+<deviceset name="SN74HC595N">
 <gates>
-<gate name="G$1" symbol="DM5441A" x="0" y="0"/>
+<gate name="G$1" symbol="74HC595" x="0" y="0"/>
 </gates>
 <devices>
 <device name="DIP-16" package="DIP-16">
 <connects>
-<connect gate="G$1" pin="GND" pad="P$12"/>
-<connect gate="G$1" pin="IN_A" pad="P$3"/>
-<connect gate="G$1" pin="IN_B" pad="P$6"/>
-<connect gate="G$1" pin="IN_C" pad="P$7"/>
-<connect gate="G$1" pin="IN_D" pad="P$4"/>
-<connect gate="G$1" pin="OUT_0" pad="P$16"/>
-<connect gate="G$1" pin="OUT_1" pad="P$15"/>
-<connect gate="G$1" pin="OUT_2" pad="P$13"/>
-<connect gate="G$1" pin="OUT_3" pad="P$9"/>
-<connect gate="G$1" pin="OUT_4" pad="P$8"/>
-<connect gate="G$1" pin="OUT_5" pad="P$14"/>
-<connect gate="G$1" pin="OUT_6" pad="P$11"/>
-<connect gate="G$1" pin="OUT_7" pad="P$10"/>
-<connect gate="G$1" pin="OUT_8" pad="P$1"/>
-<connect gate="G$1" pin="OUT_9" pad="P$2"/>
-<connect gate="G$1" pin="VCC" pad="P$5"/>
+<connect gate="G$1" pin="GND" pad="P$13"/>
+<connect gate="G$1" pin="OE" pad="P$8"/>
+<connect gate="G$1" pin="QA" pad="P$15"/>
+<connect gate="G$1" pin="QB" pad="P$1"/>
+<connect gate="G$1" pin="QC" pad="P$2"/>
+<connect gate="G$1" pin="QD" pad="P$3"/>
+<connect gate="G$1" pin="QE" pad="P$4"/>
+<connect gate="G$1" pin="QF" pad="P$5"/>
+<connect gate="G$1" pin="QG" pad="P$6"/>
+<connect gate="G$1" pin="QH" pad="P$7"/>
+<connect gate="G$1" pin="QH*" pad="P$9"/>
+<connect gate="G$1" pin="RCLK" pad="P$12"/>
+<connect gate="G$1" pin="SER" pad="P$14"/>
+<connect gate="G$1" pin="SRCLK" pad="P$11"/>
+<connect gate="G$1" pin="SRCLR" pad="P$10"/>
+<connect gate="G$1" pin="VCC" pad="P$16"/>
 </connects>
 <technologies>
 <technology name="">
