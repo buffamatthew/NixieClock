@@ -1,0 +1,8 @@
+Color selector
+Animation between number changes
+Auto or manual brightness?
+12/24 hour mode
+time zone selection
+manual time seleciton
+show leading zero for hours
+show date?
