@@ -431,6 +431,15 @@
 <junction x="10.16" y="58.42"/>
 </segment>
 </net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D4"/>
+<wire x1="124.46" y1="50.8" x2="124.46" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="SER"/>
+<wire x1="124.46" y1="53.34" x2="73.66" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="53.34" x2="73.66" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
