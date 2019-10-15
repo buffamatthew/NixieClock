@@ -1324,16 +1324,16 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$13">
 <contactref element="BCD3" pad="P$5"/>
-<contactref element="BCD5" pad="P$5"/>
-<contactref element="SR2" pad="P$10"/>
-<contactref element="BCD4" pad="P$5"/>
-<contactref element="SR2" pad="P$16"/>
 <contactref element="SR1" pad="P$10"/>
 <contactref element="BCD2" pad="P$5"/>
 <contactref element="SR1" pad="P$16"/>
 <wire x1="48.26" y1="67.31" x2="13.335" y2="67.31" width="0.1524" layer="1"/>
 <wire x1="13.335" y1="67.31" x2="11.43" y2="69.215" width="0.1524" layer="1"/>
 <contactref element="U$1" pad="3V3@0"/>
+<contactref element="BCD5" pad="P$5"/>
+<contactref element="SR2" pad="P$10"/>
+<contactref element="BCD4" pad="P$5"/>
+<contactref element="SR2" pad="P$16"/>
 <wire x1="48.26" y1="67.31" x2="144.145" y2="57.785" width="0" layer="19" extent="1-1"/>
 <wire x1="-3.81" y1="62.865" x2="11.43" y2="69.215" width="0" layer="19" extent="1-1"/>
 <wire x1="-19.05" y1="62.865" x2="-3.81" y2="62.865" width="0" layer="19" extent="1-1"/>
@@ -1361,10 +1361,6 @@ design rules under a new name.</description>
 <wire x1="-85.725" y1="62.865" x2="-6.35" y2="62.865" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$23">
-<contactref element="BCD4" pad="P$12"/>
-<contactref element="SR2" pad="P$8"/>
-<contactref element="BCD5" pad="P$12"/>
-<contactref element="SR2" pad="P$13"/>
 <contactref element="BCD2" pad="P$12"/>
 <contactref element="SR1" pad="P$8"/>
 <contactref element="SR1" pad="P$13"/>
@@ -1372,6 +1368,10 @@ design rules under a new name.</description>
 <wire x1="13.97" y1="74.295" x2="11.43" y2="76.835" width="0.1524" layer="16"/>
 <wire x1="47.625" y1="74.295" x2="13.97" y2="74.295" width="0.1524" layer="16"/>
 <contactref element="U$1" pad="GND@0"/>
+<contactref element="BCD4" pad="P$12"/>
+<contactref element="SR2" pad="P$8"/>
+<contactref element="BCD5" pad="P$12"/>
+<contactref element="SR2" pad="P$13"/>
 <wire x1="47.625" y1="74.295" x2="141.605" y2="57.785" width="0" layer="19" extent="16-16"/>
 <wire x1="-1.27" y1="55.245" x2="11.43" y2="76.835" width="0" layer="19" extent="1-1"/>
 <wire x1="-11.43" y1="62.865" x2="-1.27" y2="55.245" width="0" layer="19" extent="1-1"/>

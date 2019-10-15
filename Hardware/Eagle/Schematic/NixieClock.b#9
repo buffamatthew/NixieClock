@@ -116,6 +116,16 @@
 <hole x="75.565" y="55.245" drill="0.35"/>
 <hole x="78.105" y="55.245" drill="0.35"/>
 <hole x="65.405" y="55.245" drill="0.35"/>
+<hole x="62.865" y="55.245" drill="0.35"/>
+<hole x="60.325" y="55.245" drill="0.35"/>
+<hole x="60.325" y="62.865" drill="0.35"/>
+<hole x="62.865" y="62.865" drill="0.35"/>
+<hole x="65.405" y="62.865" drill="0.35"/>
+<hole x="67.945" y="62.865" drill="0.35"/>
+<hole x="70.485" y="62.865" drill="0.35"/>
+<hole x="73.025" y="62.865" drill="0.35"/>
+<hole x="75.565" y="62.865" drill="0.35"/>
+<hole x="78.105" y="62.865" drill="0.35"/>
 </plain>
 <libraries>
 <library name="ESP12E_DEVKIT">
