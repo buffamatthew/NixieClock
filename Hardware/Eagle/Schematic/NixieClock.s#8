@@ -1585,7 +1585,7 @@ Source: http://www.molex.com</description>
 <pinref part="BCD5" gate="G$1" pin="VCC"/>
 <wire x1="-78.74" y1="-190.5" x2="-35.56" y2="-190.5" width="0.1524" layer="91"/>
 <wire x1="-35.56" y1="-190.5" x2="-35.56" y2="-208.28" width="0.1524" layer="91"/>
-<wire x1="-35.56" y1="-208.28" x2="40.64" y2="-208.28" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="-208.28" x2="35.56" y2="-208.28" width="0.1524" layer="91"/>
 <pinref part="SR2" gate="G$1" pin="SRCLR"/>
 <wire x1="17.78" y1="-177.8" x2="35.56" y2="-177.8" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="-177.8" x2="35.56" y2="-144.78" width="0.1524" layer="91"/>
@@ -1595,8 +1595,7 @@ Source: http://www.molex.com</description>
 <junction x="35.56" y="-144.78"/>
 <pinref part="SR2" gate="G$1" pin="VCC"/>
 <wire x1="17.78" y1="-144.78" x2="35.56" y2="-144.78" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="-208.28" x2="40.64" y2="-177.8" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="-177.8" x2="35.56" y2="-177.8" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="-208.28" x2="35.56" y2="-177.8" width="0.1524" layer="91"/>
 <junction x="35.56" y="-177.8"/>
 <pinref part="SR1" gate="G$1" pin="SRCLK"/>
 <wire x1="17.78" y1="-43.18" x2="45.72" y2="-43.18" width="0.1524" layer="91"/>

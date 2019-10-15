@@ -126,6 +126,57 @@
 <hole x="73.025" y="62.865" drill="0.35"/>
 <hole x="75.565" y="62.865" drill="0.35"/>
 <hole x="78.105" y="62.865" drill="0.35"/>
+<hole x="1.27" y="76.835" drill="0.35"/>
+<hole x="3.81" y="76.835" drill="0.35"/>
+<hole x="6.35" y="76.835" drill="0.35"/>
+<hole x="8.89" y="76.835" drill="0.35"/>
+<hole x="11.43" y="76.835" drill="0.35"/>
+<hole x="13.97" y="76.835" drill="0.35"/>
+<hole x="16.51" y="76.835" drill="0.35"/>
+<hole x="19.05" y="76.835" drill="0.35"/>
+<hole x="19.05" y="69.215" drill="0.35"/>
+<hole x="16.51" y="69.215" drill="0.35"/>
+<hole x="13.97" y="69.215" drill="0.35"/>
+<hole x="11.43" y="69.215" drill="0.35"/>
+<hole x="8.89" y="69.215" drill="0.35"/>
+<hole x="6.35" y="69.215" drill="0.35"/>
+<hole x="3.81" y="69.215" drill="0.35"/>
+<hole x="1.27" y="69.215" drill="0.35"/>
+<hole x="-1.27" y="62.865" drill="0.35"/>
+<hole x="-3.81" y="62.865" drill="0.35"/>
+<hole x="-6.35" y="62.865" drill="0.35"/>
+<hole x="-8.89" y="62.865" drill="0.35"/>
+<hole x="-11.43" y="62.865" drill="0.35"/>
+<hole x="-13.97" y="62.865" drill="0.35"/>
+<hole x="-16.51" y="62.865" drill="0.35"/>
+<hole x="-19.05" y="62.865" drill="0.35"/>
+<hole x="-19.05" y="55.245" drill="0.35"/>
+<hole x="-16.51" y="55.245" drill="0.35"/>
+<hole x="-13.97" y="55.245" drill="0.35"/>
+<hole x="-11.43" y="55.245" drill="0.35"/>
+<hole x="-8.89" y="55.245" drill="0.35"/>
+<hole x="-6.35" y="55.245" drill="0.35"/>
+<hole x="-3.81" y="55.245" drill="0.35"/>
+<hole x="-1.27" y="55.245" drill="0.35"/>
+<hole x="-39.37" y="76.835" drill="0.35"/>
+<hole x="-39.37" y="69.215" drill="0.35"/>
+<hole x="-36.83" y="69.215" drill="0.35"/>
+<hole x="-36.83" y="76.835" drill="0.35"/>
+<hole x="-34.29" y="76.835" drill="0.35"/>
+<hole x="-34.29" y="69.215" drill="0.35"/>
+<hole x="-31.75" y="69.215" drill="0.35"/>
+<hole x="-31.75" y="76.835" drill="0.35"/>
+<hole x="-29.21" y="76.835" drill="0.35"/>
+<hole x="-29.21" y="69.215" drill="0.35"/>
+<hole x="-26.67" y="69.215" drill="0.35"/>
+<hole x="-26.67" y="76.835" drill="0.35"/>
+<hole x="-24.13" y="76.835" drill="0.35"/>
+<hole x="-24.13" y="69.215" drill="0.35"/>
+<hole x="-21.59" y="69.215" drill="0.35"/>
+<hole x="-21.59" y="76.835" drill="0.35"/>
+<hole x="70.485" y="62.865" drill="0.35"/>
+<hole x="67.945" y="62.865" drill="0.35"/>
+<hole x="73.025" y="62.865" drill="0.35"/>
 </plain>
 <libraries>
 <library name="ESP12E_DEVKIT">
@@ -558,7 +609,7 @@ design rules under a new name.</description>
 <attribute name="DESCRIPTION" value=" Shift Register Single 8 Bit Serial To Serial Parallel 16 Pin Plastic DIP Tube " x="69.215" y="59.055" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="Texas Instruments" x="69.215" y="59.055" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MP" value="SN74HC595N" x="69.215" y="59.055" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="56.515" y="53.975" size="1.27" layer="25" rot="R90"/>
+<attribute name="NAME" x="56.515" y="53.975" size="1.27" layer="25" rot="R180"/>
 <attribute name="PACKAGE" value="PDIP-16 Texas Instruments" x="69.215" y="59.055" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="PRICE" value="None" x="69.215" y="59.055" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
@@ -567,7 +618,7 @@ design rules under a new name.</description>
 <attribute name="DESCRIPTION" value=" Shift Register Single 8 Bit Serial To Serial Parallel 16 Pin Plastic DIP Tube " x="89.535" y="73.025" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="Texas Instruments" x="89.535" y="73.025" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MP" value="SN74HC595N" x="89.535" y="73.025" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="76.835" y="67.945" size="1.27" layer="25" rot="R90"/>
+<attribute name="NAME" x="76.835" y="67.945" size="1.27" layer="25" rot="R180"/>
 <attribute name="PACKAGE" value="PDIP-16 Texas Instruments" x="89.535" y="73.025" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="PRICE" value="None" x="89.535" y="73.025" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
@@ -585,7 +636,7 @@ design rules under a new name.</description>
 <attribute name="DESCRIPTION" value=" Shift Register Single 8 Bit Serial To Serial Parallel 16 Pin Plastic DIP Tube " x="36.195" y="61.595" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="Texas Instruments" x="36.195" y="61.595" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MP" value="SN74HC595N" x="36.195" y="61.595" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="36.195" y="67.945" size="1.27" layer="25" rot="R90"/>
+<attribute name="NAME" x="36.195" y="67.945" size="1.27" layer="25" rot="R180"/>
 <attribute name="PACKAGE" value="PDIP-16 Texas Instruments" x="36.195" y="61.595" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="PRICE" value="None" x="36.195" y="61.595" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
@@ -603,7 +654,7 @@ design rules under a new name.</description>
 <attribute name="DESCRIPTION" value=" Shift Register Single 8 Bit Serial To Serial Parallel 16 Pin Plastic DIP Tube " x="-22.225" y="26.035" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="Texas Instruments" x="-22.225" y="26.035" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MP" value="SN74HC595N" x="-22.225" y="26.035" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="-22.86" y="53.975" size="1.27" layer="25" rot="R90"/>
+<attribute name="NAME" x="-22.86" y="53.975" size="1.27" layer="25" rot="R180"/>
 <attribute name="PACKAGE" value="PDIP-16 Texas Instruments" x="-22.225" y="26.035" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="PRICE" value="None" x="-22.225" y="26.035" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
@@ -612,7 +663,7 @@ design rules under a new name.</description>
 <attribute name="DESCRIPTION" value=" Shift Register Single 8 Bit Serial To Serial Parallel 16 Pin Plastic DIP Tube " x="-1.905" y="50.8" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="Texas Instruments" x="-1.905" y="50.8" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MP" value="SN74HC595N" x="-1.905" y="50.8" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="-2.54" y="67.945" size="1.27" layer="25" rot="R90"/>
+<attribute name="NAME" x="-2.54" y="67.945" size="1.27" layer="25" rot="R180"/>
 <attribute name="PACKAGE" value="PDIP-16 Texas Instruments" x="-1.905" y="50.8" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="PRICE" value="None" x="-1.905" y="50.8" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
@@ -630,7 +681,7 @@ design rules under a new name.</description>
 <attribute name="DESCRIPTION" value=" Shift Register Single 8 Bit Serial To Serial Parallel 16 Pin Plastic DIP Tube " x="-28.575" y="29.21" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="Texas Instruments" x="-28.575" y="29.21" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MP" value="SN74HC595N" x="-28.575" y="29.21" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="-43.18" y="67.945" size="1.27" layer="25" rot="R90"/>
+<attribute name="NAME" x="-43.18" y="67.945" size="1.27" layer="25" rot="R180"/>
 <attribute name="PACKAGE" value="PDIP-16 Texas Instruments" x="-28.575" y="29.21" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="PRICE" value="None" x="-28.575" y="29.21" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
@@ -1364,8 +1415,11 @@ design rules under a new name.</description>
 <wire x1="151.765" y1="80.645" x2="147.32" y2="85.09" width="0.1524" layer="16"/>
 <wire x1="147.32" y1="85.09" x2="104.14" y2="85.09" width="0.1524" layer="16"/>
 <via x="104.14" y="85.09" extent="1-16" drill="0.35"/>
-<wire x1="104.14" y1="85.09" x2="99.06" y2="85.09" width="0.1524" layer="1"/>
-<wire x1="99.06" y1="85.09" x2="90.805" y2="76.835" width="0.1524" layer="1"/>
+<wire x1="104.14" y1="85.09" x2="102.87" y2="83.82" width="0.1524" layer="1"/>
+<wire x1="102.87" y1="76.2" x2="102.87" y2="83.82" width="0.1524" layer="1"/>
+<wire x1="90.805" y1="76.835" x2="93.345" y2="74.295" width="0.1524" layer="1"/>
+<wire x1="93.345" y1="74.295" x2="100.965" y2="74.295" width="0.1524" layer="1"/>
+<wire x1="100.965" y1="74.295" x2="102.87" y2="76.2" width="0.1524" layer="1"/>
 <wire x1="-1.27" y1="55.245" x2="11.43" y2="76.835" width="0" layer="19" extent="1-1"/>
 <wire x1="-11.43" y1="62.865" x2="-1.27" y2="55.245" width="0" layer="19" extent="1-1"/>
 <wire x1="-29.21" y1="76.835" x2="-11.43" y2="62.865" width="0" layer="19" extent="1-1"/>
