@@ -99,7 +99,7 @@
 <text x="-15.7299" y="-4.83316875" size="1.780640625" layer="97">5</text>
 <text x="-15.7437" y="-9.9095" size="1.77863125" layer="97">6</text>
 <text x="-15.7417" y="-14.9938" size="1.77891875" layer="97">7</text>
-<text x="14.7531" y="-22.6451" size="1.78108125" layer="97">9</text>
+<text x="14.7531" y="-20.1051" size="1.78108125" layer="97">9</text>
 <text x="15.2274" y="2.7753" size="1.77946875" layer="97">13</text>
 <text x="15.2345" y="-4.82406875" size="1.778640625" layer="97">12</text>
 <text x="15.2385" y="-9.905" size="1.77816875" layer="97">11</text>
@@ -113,7 +113,7 @@
 <pin name="QF" x="-15.24" y="-5.08" length="middle"/>
 <pin name="QG" x="-15.24" y="-10.16" length="middle"/>
 <pin name="QH" x="-15.24" y="-15.24" length="middle"/>
-<pin name="QH*" x="15.24" y="-22.86" length="middle" rot="R180"/>
+<pin name="QH*" x="15.24" y="-20.32" length="middle" rot="R180"/>
 <pin name="SRCLK" x="15.24" y="-10.16" length="middle" direction="in" function="clk" rot="R180"/>
 <pin name="RCLK" x="15.24" y="-5.08" length="middle" direction="in" function="clk" rot="R180"/>
 <pin name="GND" x="-15.24" y="-20.32" length="middle" direction="pwr"/>
