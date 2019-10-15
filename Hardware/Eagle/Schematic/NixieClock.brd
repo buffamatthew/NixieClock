@@ -1235,9 +1235,9 @@ design rules under a new name.</description>
 <contactref element="SR1" pad="P$10"/>
 <contactref element="BCD2" pad="P$5"/>
 <contactref element="SR1" pad="P$16"/>
-<wire x1="139.065" y1="71.755" x2="93.345" y2="71.755" width="0.1524" layer="1"/>
+<wire x1="145.415" y1="71.755" x2="93.345" y2="71.755" width="0.1524" layer="1"/>
 <wire x1="93.345" y1="71.755" x2="90.805" y2="69.215" width="0.1524" layer="1"/>
-<wire x1="146.685" y1="79.375" x2="139.065" y2="71.755" width="0.1524" layer="1"/>
+<wire x1="154.305" y1="80.645" x2="145.415" y2="71.755" width="0.1524" layer="1"/>
 <wire x1="75.565" y1="62.865" x2="76.835" y2="64.135" width="0.1524" layer="1"/>
 <wire x1="85.725" y1="64.135" x2="76.835" y2="64.135" width="0.1524" layer="1"/>
 <wire x1="90.805" y1="69.215" x2="85.725" y2="64.135" width="0.1524" layer="1"/>
@@ -1251,7 +1251,6 @@ design rules under a new name.</description>
 <wire x1="13.335" y1="67.31" x2="11.43" y2="69.215" width="0.1524" layer="1"/>
 <wire x1="60.325" y1="62.865" x2="56.515" y2="62.865" width="0.1524" layer="1"/>
 <wire x1="56.515" y1="62.865" x2="50.165" y2="69.215" width="0.1524" layer="1"/>
-<wire x1="146.685" y1="79.375" x2="154.305" y2="80.645" width="0" layer="19" extent="1-1"/>
 <wire x1="-3.81" y1="62.865" x2="11.43" y2="69.215" width="0" layer="19" extent="1-1"/>
 <wire x1="-19.05" y1="62.865" x2="-3.81" y2="62.865" width="0" layer="19" extent="1-1"/>
 <wire x1="-29.21" y1="69.215" x2="-19.05" y2="62.865" width="0" layer="19" extent="1-1"/>

@@ -1591,9 +1591,9 @@ Source: http://www.molex.com</description>
 <wire x1="-12.7" y1="-193.04" x2="50.8" y2="-193.04" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="-193.04" x2="-12.7" y2="-215.9" width="0.1524" layer="91"/>
 <junction x="-12.7" y="-193.04"/>
-<wire x1="-30.48" y1="-193.04" x2="-12.7" y2="-193.04" width="0.1524" layer="91"/>
-<wire x1="-30.48" y1="-157.48" x2="-30.48" y2="-193.04" width="0.1524" layer="91"/>
-<wire x1="-121.92" y1="-157.48" x2="-30.48" y2="-157.48" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="-193.04" x2="-12.7" y2="-193.04" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="-157.48" x2="-27.94" y2="-193.04" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="-157.48" x2="-27.94" y2="-157.48" width="0.1524" layer="91"/>
 <pinref part="BCD4" gate="G$1" pin="GND"/>
 <wire x1="-109.22" y1="-134.62" x2="-121.92" y2="-134.62" width="0.1524" layer="91"/>
 <wire x1="-121.92" y1="-134.62" x2="-121.92" y2="-157.48" width="0.1524" layer="91"/>
@@ -1602,8 +1602,8 @@ Source: http://www.molex.com</description>
 <pinref part="BCD0" gate="G$1" pin="GND"/>
 <wire x1="-109.22" y1="124.46" x2="-121.92" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="-121.92" y1="124.46" x2="-121.92" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="-121.92" y1="101.6" x2="-30.48" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="-30.48" y1="101.6" x2="-30.48" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="101.6" x2="-27.94" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="101.6" x2="-27.94" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="SR0" gate="G$1" pin="GND"/>
 <wire x1="-12.7" y1="76.2" x2="-12.7" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="66.04" x2="50.8" y2="66.04" width="0.1524" layer="91"/>
@@ -1619,13 +1619,13 @@ Source: http://www.molex.com</description>
 <pinref part="SR0" gate="G$1" pin="OE"/>
 <wire x1="17.78" y1="99.06" x2="50.8" y2="99.06" width="0.1524" layer="91"/>
 <junction x="50.8" y="99.06"/>
-<wire x1="-30.48" y1="66.04" x2="-12.7" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="66.04" x2="-12.7" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="BCD1" gate="G$1" pin="GND"/>
 <pinref part="BCD2" gate="G$1" pin="GND"/>
 <wire x1="-109.22" y1="-5.08" x2="-121.92" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-121.92" y1="-5.08" x2="-121.92" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="-121.92" y1="-27.94" x2="-30.48" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="-30.48" y1="-27.94" x2="-30.48" y2="-63.5" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="-27.94" x2="-27.94" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="-27.94" x2="-27.94" y2="-63.5" width="0.1524" layer="91"/>
 <pinref part="SR1" gate="G$1" pin="GND"/>
 <wire x1="-12.7" y1="-53.34" x2="-12.7" y2="-63.5" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="-63.5" x2="50.8" y2="-63.5" width="0.1524" layer="91"/>
@@ -1638,7 +1638,7 @@ Source: http://www.molex.com</description>
 <pinref part="SR1" gate="G$1" pin="OE"/>
 <wire x1="17.78" y1="-30.48" x2="50.8" y2="-30.48" width="0.1524" layer="91"/>
 <junction x="50.8" y="-30.48"/>
-<wire x1="-30.48" y1="-63.5" x2="-12.7" y2="-63.5" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="-63.5" x2="-12.7" y2="-63.5" width="0.1524" layer="91"/>
 <pinref part="BCD3" gate="G$1" pin="GND"/>
 <wire x1="50.8" y1="66.04" x2="50.8" y2="-30.48" width="0.1524" layer="91"/>
 <junction x="50.8" y="66.04"/>
