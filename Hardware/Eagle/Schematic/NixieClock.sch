@@ -179,6 +179,36 @@
 <text x="10.16" y="17.78" size="0.8128" layer="51" align="bottom-right">D0</text>
 <text x="-2.54" y="-19.05" size="1.778" layer="25" rot="R90">&gt;NAME</text>
 <text x="3.81" y="-19.05" size="1.778" layer="27" rot="R90">&gt;VALUE</text>
+<hole x="-11.43" y="-17.78" drill="0.35"/>
+<hole x="-11.43" y="-15.24" drill="0.35"/>
+<hole x="-11.43" y="-12.7" drill="0.35"/>
+<hole x="-11.43" y="-10.16" drill="0.35"/>
+<hole x="-11.43" y="-7.62" drill="0.35"/>
+<hole x="-11.43" y="-5.08" drill="0.35"/>
+<hole x="-11.43" y="-2.54" drill="0.35"/>
+<hole x="-11.43" y="0" drill="0.35"/>
+<hole x="-11.43" y="2.54" drill="0.35"/>
+<hole x="-11.43" y="5.08" drill="0.35"/>
+<hole x="-11.43" y="7.62" drill="0.35"/>
+<hole x="-11.43" y="10.16" drill="0.35"/>
+<hole x="-11.43" y="12.7" drill="0.35"/>
+<hole x="-11.43" y="15.24" drill="0.35"/>
+<hole x="-11.43" y="17.78" drill="0.35"/>
+<hole x="11.43" y="17.78" drill="0.35"/>
+<hole x="11.43" y="15.24" drill="0.35"/>
+<hole x="11.43" y="12.7" drill="0.35"/>
+<hole x="11.43" y="10.16" drill="0.35"/>
+<hole x="11.43" y="7.62" drill="0.35"/>
+<hole x="11.43" y="5.08" drill="0.35"/>
+<hole x="11.43" y="2.54" drill="0.35"/>
+<hole x="11.43" y="0" drill="0.35"/>
+<hole x="11.43" y="-2.54" drill="0.35"/>
+<hole x="11.43" y="-5.08" drill="0.35"/>
+<hole x="11.43" y="-7.62" drill="0.35"/>
+<hole x="11.43" y="-10.16" drill="0.35"/>
+<hole x="11.43" y="-12.7" drill="0.35"/>
+<hole x="11.43" y="-15.24" drill="0.35"/>
+<hole x="11.43" y="-17.78" drill="0.35"/>
 </package>
 </packages>
 <symbols>
