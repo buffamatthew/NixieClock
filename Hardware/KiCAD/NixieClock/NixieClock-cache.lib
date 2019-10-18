@@ -1,41 +1,6 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# NixieClock-eagle-import_5566-12
-#
-DEF NixieClock-eagle-import_5566-12 X 0 40 Y Y 12 L N
-F0 "X" 100 -30 51 H V L BNN
-F1 "NixieClock-eagle-import_5566-12" -30 55 59 H I L BNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 1 0 0 50 0 0 0 N
-P 2 2 0 0 50 0 0 0 N
-P 2 3 0 0 50 0 0 0 N
-P 2 4 0 0 50 0 0 0 N
-P 2 5 0 0 50 0 0 0 N
-P 2 6 0 0 50 0 0 0 N
-P 2 7 0 0 50 0 0 0 N
-P 2 8 0 0 50 0 0 0 N
-P 2 9 0 0 50 0 0 0 N
-P 2 10 0 0 50 0 0 0 N
-P 2 11 0 0 50 0 0 0 N
-P 2 12 0 0 50 0 0 0 N
-X S 1 -100 0 100 R 0 0 1 0 P
-X S 2 -100 0 100 R 0 0 2 0 P
-X S 3 -100 0 100 R 0 0 3 0 P
-X S 4 -100 0 100 R 0 0 4 0 P
-X S 5 -100 0 100 R 0 0 5 0 P
-X S 6 -100 0 100 R 0 0 6 0 P
-X S 7 -100 0 100 R 0 0 7 0 P
-X S 8 -100 0 100 R 0 0 8 0 P
-X S 9 -100 0 100 R 0 0 9 0 P
-X S 10 -100 0 100 R 0 0 10 0 P
-X S 11 -100 0 100 R 0 0 11 0 P
-X S 12 -100 0 100 R 0 0 12 0 P
-ENDDRAW
-ENDDEF
-#
 # NixieClock-eagle-import_DM5441ADIP-16
 #
 DEF NixieClock-eagle-import_DM5441ADIP-16 ~ 0 40 Y Y 1 L N
