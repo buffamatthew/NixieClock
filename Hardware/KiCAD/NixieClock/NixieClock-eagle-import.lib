@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# NixieClock-eagle-import_5566-12
+# 5566-12
 #
-DEF NixieClock-eagle-import_5566-12 X 0 40 Y Y 12 L N
+DEF 5566-12 X 0 40 Y Y 12 L N
 F0 "X" 100 -30 51 H V L BNN
-F1 "NixieClock-eagle-import_5566-12" -30 55 59 H I L BNN
+F1 "5566-12" -30 55 59 H I L BNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -36,11 +36,11 @@ X S 12 -100 0 100 R 0 0 12 0 P
 ENDDRAW
 ENDDEF
 #
-# NixieClock-eagle-import_DM5441ADIP-16
+# DM5441ADIP-16
 #
-DEF NixieClock-eagle-import_DM5441ADIP-16 ~ 0 40 Y Y 1 L N
+DEF DM5441ADIP-16 ~ 0 40 Y Y 1 L N
 F0 "" 0 0 50 H I C CNN
-F1 "NixieClock-eagle-import_DM5441ADIP-16" 0 0 50 H I C CNN
+F1 "DM5441ADIP-16" 0 0 50 H I C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -84,11 +84,11 @@ X OUT_3 P$9 600 -800 200 L 50 50 1 0 B
 ENDDRAW
 ENDDEF
 #
-# NixieClock-eagle-import_ESP12E_DEVKIT
+# ESP12E_DEVKIT
 #
-DEF NixieClock-eagle-import_ESP12E_DEVKIT ~ 0 40 Y Y 1 L N
+DEF ESP12E_DEVKIT ~ 0 40 Y Y 1 L N
 F0 "" -500 800 59 H V L BNN
-F1 "NixieClock-eagle-import_ESP12E_DEVKIT" -500 -900 59 H V L BNN
+F1 "ESP12E_DEVKIT" -500 -900 59 H V L BNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -129,11 +129,11 @@ X VIN VIN -700 -700 200 R 0 50 1 0 B
 ENDDRAW
 ENDDEF
 #
-# NixieClock-eagle-import_SN74HC595NDIP-16
+# SN74HC595NDIP-16
 #
-DEF NixieClock-eagle-import_SN74HC595NDIP-16 ~ 0 40 Y Y 1 L N
+DEF SN74HC595NDIP-16 ~ 0 40 Y Y 1 L N
 F0 "" 0 0 50 H I C CNN
-F1 "NixieClock-eagle-import_SN74HC595NDIP-16" 0 0 50 H I C CNN
+F1 "SN74HC595NDIP-16" 0 0 50 H I C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
