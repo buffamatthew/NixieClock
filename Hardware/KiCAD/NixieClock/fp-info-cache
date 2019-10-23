@@ -1,4 +1,4 @@
-16308888826345302
+16301030725221717
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -50497,41 +50497,6 @@ net tie
 0
 4
 4
-NixieClock
-DM7441A
-16-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils)
-THT DIP DIL PDIP 2.54mm 7.62mm 300mil
-0
-16
-15
-NixieClock
-Mini360
-
-
-0
-4
-4
-NixieClock
-NCH6100HV
-
-
-0
-5
-4
-NixieClock
-NODEMCU
-
-
-0
-30
-24
-NixieClock
-SN74HC595
-16-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils)
-THT DIP DIL PDIP 2.54mm 7.62mm 300mil
-0
-16
-16
 OptoDevice
 ADNS-9800
 Laser Gaming Sensor ADNS-9800
