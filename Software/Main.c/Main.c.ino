@@ -73,6 +73,23 @@ typedef enum{
   TRANSITION_MODE_FADE
 }transitionMode;
 
+typedef enum eNixieTube
+{
+  eNIXIE_TUBE_0 = 0U,
+  eNIXIE_TUBE_1,
+  eNIXIE_TUBE_2,
+  eNIXIE_TUBE_3,
+  eNIXIE_TUBE_4,
+  eNIXIE_TUBE_5,
+  // new eNIXIE_TUBE above this line
+  eNIXIE_TUBE_COUNT
+} eNIXIE_TUBE;
+
+typedef struct gxLookupNixieConfig
+{
+  eNIXIE_TUBE
+};
+
 void setup() 
 {
   pinMode(RCLK,OUTPUT);
@@ -227,12 +244,9 @@ void updateNixies (void)
   }
   
   digitalWrite(RCLK,LOW);
-  shiftOut(SER,SRCLK,LSBFIRST,((currentTimeStamp[0]-0x30)<<4)|currentTimeStamp[1]-0x30);
-  //Hours
-  shiftOut(SER,SRCLK,LSBFIRST,((currentTimeStamp[2]-0x30)<<4)|currentTimeStamp[3]-0x30);
-  //Mins
-  shiftOut(SER,SRCLK,LSBFIRST,((currentTimeStamp[4]-0x30)<<4)|currentTimeStamp[5]-0x30);
-  //Secs
+  shiftOut(SER,SRCLK,LSBFIRST,((currentTimeStamp[0]-0x30)<<4)|currentTimeStamp[1]-0x30); //Hours
+  shiftOut(SER,SRCLK,LSBFIRST,((currentTimeStamp[2]-0x30)<<4)|currentTimeStamp[3]-0x30); //Mins
+  shiftOut(SER,SRCLK,LSBFIRST,((currentTimeStamp[4]-0x30)<<4)|currentTimeStamp[5]-0x30); //Secs
   digitalWrite(RCLK,HIGH); 
 }
 
