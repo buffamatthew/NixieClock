@@ -27,24 +27,7 @@
 #define d10 1
 /*PINS*/
 
-#include <BearSSLHelpers.h>
-#include <CertStoreBearSSL.h>
 #include <ESP8266WiFi.h>
-#include <ESP8266WiFiAP.h>
-#include <ESP8266WiFiGeneric.h>
-#include <ESP8266WiFiMulti.h>
-#include <ESP8266WiFiScan.h>
-#include <ESP8266WiFiSTA.h>
-#include <ESP8266WiFiType.h>
-#include <WiFiClient.h>
-#include <WiFiClientSecure.h>
-#include <WiFiClientSecureAxTLS.h>
-#include <WiFiClientSecureBearSSL.h>
-#include <WiFiServer.h>
-#include <WiFiServerSecure.h>
-#include <WiFiServerSecureAxTLS.h>
-#include <WiFiServerSecureBearSSL.h>
-#include <WiFiUdp.h>
 #include <time.h>
 
 unsigned char c = 0;
@@ -68,8 +51,8 @@ const char RCLK = d3; //LATCH
 const char SER = d4;
 const char lampTestPin = d8;
 
-const char* ssid = "ATT2RhL23U";//assume fixed
-const char* password = "46q3m5+ppb#f";//assume fixed
+const char* ssid = "MySpectrumWiFi60-2G";//assume fixed
+const char* password = "betternest520";//assume fixed
 
 int timezone = -5 * 3600;
 int dst = 0;
@@ -101,36 +84,36 @@ void setup()
   clearNixies();
   
   Serial.begin(115200);
-  //Serial.println();
-  //Serial.print("Wifi connecting to ");
-  //Serial.println( ssid );
+  Serial.println();
+  Serial.print("Wifi connecting to ");
+  Serial.println( ssid );
 
   WiFi.begin(ssid,password);
 
   //Serial.println();
   
-  //Serial.print("Connecting");
+  Serial.print("Connecting");
 
   while( WiFi.status() != WL_CONNECTED ){
-      //Serial.print(".");
+      Serial.print(".");
       startupAnimation();
   }
 
   //Serial.println();
 
-  //Serial.println("Wifi Connected Success!");
-  //Serial.print("NodeMCU IP Address : ");
-  //Serial.println(WiFi.localIP() );
+  Serial.println("Wifi Connected Success!");
+  Serial.print("NodeMCU IP Address : ");
+  Serial.println(WiFi.localIP() );
 
   configTime(timezone, dst, "0.us.pool.ntp.org","time.nist.gov");//assume fixed
-  //Serial.println("\nWaiting for Internet time");
+  Serial.println("\nWaiting for Internet time");
 
   while(!time(nullptr)){
-     //Serial.print("*");
+     Serial.print("*");
      startupAnimation();
      //delay(1000);
   }
-  //Serial.println("\nTime response....OK"); 
+  Serial.println("\nTime response....OK"); 
 }
 
 void loop() 
@@ -149,13 +132,13 @@ void loop()
       setTimeStamp();
       updateNixies();
   
-      /*Serial.print(currentTimeStamp[0]-0x30,HEX);
+      Serial.print(currentTimeStamp[0]-0x30,HEX);
       Serial.print(currentTimeStamp[1]-0x30,HEX);
       Serial.print(currentTimeStamp[2]-0x30,HEX);
       Serial.print(currentTimeStamp[3]-0x30,HEX);
       Serial.print(currentTimeStamp[4]-0x30,HEX);
       Serial.println(currentTimeStamp[5]-0x30,HEX);
-      */
+      
       lastSecPrinted = currentSec;
   
         for (i = 0; i < NUM_OF_NIXIE; i++)
@@ -234,7 +217,7 @@ void updateNixies (void)
       if (currentTransitionMode == TRANSITION_MODE_CYCLE)
       {
         cycleNixie((currentTimeStamp[0]-0x30<<20)|(currentTimeStamp[1]-0x30<<16)|(currentTimeStamp[2]-0x30<<12)|(currentTimeStamp[3]-0x30<<8)|(currentTimeStamp[4]-0x30<<4)|(currentTimeStamp[5]-0x30),animateNixieField,CYCLE_NIXIE_DELAY_NORMAL);
-        Serial.println(animateNixieField,BIN);
+        //Serial.println(animateNixieField,BIN);
       }
       if (currentTransitionMode == TRANSITION_MODE_FADE)
       {
@@ -316,4 +299,3 @@ void clearNixies (void)
   shiftOut(SER,SRCLK,LSBFIRST,0);
   digitalWrite(RCLK,HIGH);
 }
-
