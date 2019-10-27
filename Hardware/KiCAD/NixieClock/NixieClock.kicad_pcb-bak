@@ -3,7 +3,7 @@
   (general
     (thickness 1.6)
     (drawings 16)
-    (tracks 820)
+    (tracks 819)
     (zones 0)
     (modules 37)
     (nets 1)
@@ -11,7 +11,7 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal)
+    (0 F.Cu signal hide)
     (31 B.Cu signal)
     (32 B.Adhes user)
     (33 F.Adhes user)
@@ -89,7 +89,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory "../Gerbers/"))
   )
 
   (net 0 "")
@@ -1673,10 +1673,10 @@
 
   (gr_line (start 257.175 77.47) (end 260.096 80.01) (layer Edge.Cuts) (width 0.05) (tstamp 5DB525DE))
   (gr_line (start 229.743 77.47) (end 257.175 77.47) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 220.218 67.945) (end 229.743 77.47) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 86.36 67.945) (end 220.218 67.945) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 223.393 71.12) (end 229.743 77.47) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 83.82 71.12) (end 223.393 71.12) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 260.096 80.01) (end 275.59 80.01) (layer Edge.Cuts) (width 0.05) (tstamp 5DB4F921))
-  (gr_line (start 74.93 81.28) (end 86.36 67.945) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 74.93 81.28) (end 83.82 71.12) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 74.93 127) (end 74.93 81.28) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 86.36 138.43) (end 74.93 127) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 307.848 80.01) (end 275.59 80.01) (layer Edge.Cuts) (width 0.05))
@@ -2505,7 +2505,6 @@
   (segment (start 216.662 77.724) (end 216.662 74.676) (width 0.25) (layer F.Cu) (net 0))
   (segment (start 224.282 74.676) (end 227.965 78.359) (width 0.25) (layer F.Cu) (net 0))
   (segment (start 227.965 78.359) (end 237.236 78.359) (width 0.25) (layer F.Cu) (net 0))
-  (segment (start 221.869 78.359) (end 227.965 78.359) (width 0.25) (layer F.Cu) (net 0))
   (segment (start 221.996 72.39) (end 224.282 74.676) (width 0.25) (layer F.Cu) (net 0))
   (segment (start 200.025 72.39) (end 221.996 72.39) (width 0.25) (layer F.Cu) (net 0))
 
