@@ -47,11 +47,11 @@ void updateNixies (void);
 struct tm* p_tm;
 
 const char SRCLK = d2; //clock
-const char RCLK = d3; //LATCH
-const char SER = d4;
+const char RCLK = d1; //LATCH
+const char SER = d0;
 const char lampTestPin = d8;
 
-const char* ssid = "MySpectrumWiFi60-2G";//assume fixed
+const char* ssid = "MySpectrumWiFi60-2G_BonusRoom";//assume fixed
 const char* password = "betternest520";//assume fixed
 
 int timezone = -5 * 3600;
@@ -85,10 +85,6 @@ typedef enum eNixieTube
   eNIXIE_TUBE_COUNT
 } eNIXIE_TUBE;
 
-typedef struct gxLookupNixieConfig
-{
-  eNIXIE_TUBE
-};
 
 void setup() 
 {
