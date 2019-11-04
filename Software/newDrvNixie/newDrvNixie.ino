@@ -10,10 +10,12 @@
 #define d9  3
 #define d10 1
 
-#define cNIXIE_HIGHEST_DISPLAYABLE_NUMBER ( 9U )
+#define cNIXIE_HIGHEST_DISPLAYABLE_NUMBER   ( 9U )
+#define cNIXIE_TUBE_OFF                   ( 0x0F )
 
-uint32 gu32LastNumShiftedOut = 0U;
-
+static uint32 gu32LastNumShiftedOut = 0U;
+static uint8 u8NumToDisplay = 0;
+ 
 const char SRCLK = d2; //clock
 const char RCLK = d1; //LATCH
 const char SER = d0;
@@ -53,103 +55,82 @@ xNIXIE_TUBE_CONFIG gxLookupNixieTubeConfig [eNIXIE_TUBE_COUNT] =
   { { d3, d4, d5 }, 0xFF0FFFFF }  // eNIXIE_TUBE_5
 };
 
-static void vDrvNixieDispNum( uint32 u32NumToShiftOut );
 static void vDrvNixieDisplayNums( uint8 * u8NumsToDisplay, uint8 u8Length );
 
 void setup() 
 {
-  pinMode(RCLK,OUTPUT);
-  pinMode(SRCLK,OUTPUT);
-  pinMode(SER,OUTPUT);
+  pinMode( RCLK, OUTPUT );
+  pinMode( SRCLK, OUTPUT );
+  pinMode( SER, OUTPUT );
   
-  Serial.begin(115200);
+  Serial.begin( 115200 );
   // put your setup code here, to run once:
-
 }
 
 void loop() 
 {
-  unsigned char u8NumToDisplay[6] = { 0U, 1U, 2U, 3U, 4U, 5U };
-  /*eNIXIE_TUBE_TYPE eWhichNixieTube;
- 
-  for( eWhichNixieTube = (eNIXIE_TUBE_TYPE)0U; eWhichNixieTube <  eNIXIE_TUBE_COUNT; eWhichNixieTube + 1U )
+  /*if( Serial.available() > 0U ) 
   {
-    for( uint8 i = 0; i < 10; i++ )
+    u8NumToDisplay = Serial.read();
+    if( ( u8NumToDisplay >= 0x30 ) && ( u8NumToDisplay <= 0x39 ) )
     {
-      vDrvNixieDispNum( eWhichNixieTube, i );
+      u8NumToDisplay = ( u8NumToDisplay - 0x30 );
+      vDrvNixieDisplayNums( (uint8 *)&u8NumToDisplay, 1U );
+    }
+    else
+    {
+      Serial.print( "Cannot display " );
+      Serial.println( u8NumToDisplay );
     }
   }*/
-
-  vDrvNixieDisplayNums( (uint8 *)&u8NumToDisplay, 6U );
-
-  delay(1000);
-}
-
-static void vDrvNixieDispNum( uint32 u32NumToShiftOut ) // will maintain all other nixie tube values when calling this
-{
-  uint32 u32NumToShiftOut = ( gu32LastNumShiftedOut & ( ( 0xFFFFFFF0 << ( eWhichNixie * 4U ) ) | ( gxLookupNixieTubeConfig[eWhichNixie].u32NixieTubeClearingMask & ( ( eWhichNixie * 4U ) << (uint32)u8NumToDisplay & 0xF0 ) ) ) ); // the nibble of the nixie tube to change value of is now cleared
-  uint32 u32ZeroPaddedNumToDisplay = 0U;
-
-  if( u8NumToDisplay < cNIXIE_HIGHEST_DISPLAYABLE_NUMBER )
-  {
-    u32ZeroPaddedNumToDisplay = ( eWhichNixie * 4U ) << ( (uint32)u8NumToDisplay & 0xF0 ) ; // clear the upper nibble of the byte passed in, eWhichNixie of 1 shifts 4, of 2 shifts 8 etc
-    
-    digitalWrite(RCLK,LOW);
-    shiftOut(SER,SRCLK,LSBFIRST,( u32NumToShiftOut & 0x00FF0000 ) ); // first on the wire
-    shiftOut(SER,SRCLK,LSBFIRST,( u32NumToShiftOut & 0x0000FF00 ) );
-    shiftOut(SER,SRCLK,LSBFIRST,( u32NumToShiftOut & 0x000000FF ) ); // last on the wire
-    digitalWrite(RCLK,HIGH); 
-
-    gu32LastNumShiftedOut = u32NumToShiftOut;
-  }
-  else
-  {
-    Serial.print( "vDrvNixieDispNum invalid number. Passed in "); 
-    Serial.print( u8NumToDisplay );
-    Serial.print( ". Can only display ");
-    Serial.print( cNIXIE_HIGHEST_DISPLAYABLE_NUMBER );
-    Serial.println( " max" );
-  }
-   
-  return;
+  
+  vDrvNixieDisplayNums( (uint8 *)&u8NumToDisplay, 1U );
+  u8NumToDisplay = ( ( u8NumToDisplay + 1U ) % ( cNIXIE_HIGHEST_DISPLAYABLE_NUMBER + 1U ) );
+  delay(50);
 }
 
 void vDrvNixieDisplayNums( uint8 * u8NumsToDisplay, uint8 u8Length )
-{
-  // this function builds a 32 bit variable to shift out to the nixie tubes
-  //uint32 u32NumToShiftOut = ( gu32LastNumShiftedOut & ( ( 0xFFFFFFF0 << ( eWhichNixie * 4U ) ) | ( gxLookupNixieTubeConfig[eWhichNixie].u32NixieTubeClearingMask & ( ( eWhichNixie * 4U ) << (uint32)u8NumToDisplay & 0xF0 ) ) ) ); // the nibble of the nixie tube to change value of is now cleared
-  //uint32 u32ZeroPaddedNumToDisplay = 0U;
-  
-  uint32 u32NumToDisplay = 0U;
-  
-  //eNIXIE_TUBE_TYPE eWhichNixieTube = (eNIXIE_TUBE_TYPE)0U;
+{ 
+  bool boAllValidNumbers = true;
   uint16 i;
   
   if( u8Length <= eNIXIE_TUBE_COUNT )
   {
     for( i = 0U; i < u8Length; i++ )
-    {
-      if( u8NumsToDisplay[ i ] <= cNIXIE_HIGHEST_DISPLAYABLE_NUMBER )
+    { 
+      if( u8NumsToDisplay[ i ] > cNIXIE_HIGHEST_DISPLAYABLE_NUMBER )
       {
-        u32NumToDisplay |= ( ( (uint32)u8NumsToDisplay[i] & 0x0F ) << ( 4 * i ) );
-      }
-      else
-      {
-        Serial.print( "vDrvNixieDisplayNums invalid number. u8NumsToDisplay[ " );
+        Serial.print( "vDrvNixieDisplayNums invalid number. u8NumsToDisplay[" );
         Serial.print( i );
         Serial.print( "] = " );
         Serial.print( u8NumsToDisplay[i] );
-        Serial.print( "Can only display " );
-        Serial.print( (uint8)eNIXIE_TUBE_COUNT );
-        Serial.println( " max" );
-        
+        Serial.print( ". Can only display " );
+        Serial.print( (uint8)cNIXIE_HIGHEST_DISPLAYABLE_NUMBER );
+        Serial.println( " on a nixie tube." );
+
+        boAllValidNumbers = false;
         break;
       }
-      
     }
 
-    //Serial.println( u32NumToDisplay, HEX );
-    vDrvNixieDispNum( u32NumToDisplay );
+    if( true == boAllValidNumbers )
+    {
+      digitalWrite( RCLK, LOW );
+      
+      for( i = 0U; i < u8Length; i++ )
+      {
+        if( ( i + 1U ) < u8Length )
+        {
+          shiftOut( SER, SRCLK, LSBFIRST, ( ( u8NumsToDisplay[i + 1] << 4 ) | u8NumsToDisplay[i] ) );
+        }
+        else
+        {
+          shiftOut( SER, SRCLK, LSBFIRST, u8NumsToDisplay[i] ); // shift an F to the nixie tube, it won't output anything
+        }
+      }
+      
+      digitalWrite( RCLK, HIGH );
+    }
   }
   else
   {
