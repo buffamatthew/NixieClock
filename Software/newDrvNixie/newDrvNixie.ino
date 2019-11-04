@@ -10,6 +10,7 @@
 #define d9  3
 #define d10 1
 
+#define cNIXIE_TUBE_COUNT                   ( 6U )
 #define cNIXIE_HIGHEST_DISPLAYABLE_NUMBER   ( 9U )
 #define cNIXIE_TUBE_OFF                   ( 0x0F )
 
@@ -19,41 +20,6 @@ static uint8 u8NumToDisplay = 0;
 const char SRCLK = d2; //clock
 const char RCLK = d1; //LATCH
 const char SER = d0;
-
-typedef enum eNixieTubeType
-{
-  eNIXIE_TUBE_0 = 0U,
-  eNIXIE_TUBE_1,
-  eNIXIE_TUBE_2,
-  eNIXIE_TUBE_3,
-  eNIXIE_TUBE_4,
-  eNIXIE_TUBE_5,
-  // new nixie tubes above this line
-  eNIXIE_TUBE_COUNT
-}eNIXIE_TUBE_TYPE;
-
-typedef struct xREGLedPins
-{
-  const uint8 u8RedPin;
-  const uint8 u8GreenPin;
-  const uint8 u8BluePin;
-}xRGB_LED_PINS;
-
-typedef struct xNixieTubeConfig // each nixie tube has an RGB LED, and a mask...
-{
-  xRGB_LED_PINS u8RGBLedPins;
-  uint32 u32NixieTubeClearingMask; // mask used to change the display of a nixie tube
-}xNIXIE_TUBE_CONFIG;
-
-xNIXIE_TUBE_CONFIG gxLookupNixieTubeConfig [eNIXIE_TUBE_COUNT] = 
-{
-  { { d3, d4, d5 }, 0xFFFFFFF0 }, // eNIXIE_TUBE_0
-  { { d3, d4, d5 }, 0xFFFFFF0F }, // eNIXIE_TUBE_1
-  { { d3, d4, d5 }, 0xFFFFF0FF }, // eNIXIE_TUBE_2
-  { { d3, d4, d5 }, 0xFFFF0FFF }, // eNIXIE_TUBE_3
-  { { d3, d4, d5 }, 0xFFF0FFFF }, // eNIXIE_TUBE_4
-  { { d3, d4, d5 }, 0xFF0FFFFF }  // eNIXIE_TUBE_5
-};
 
 static void vDrvNixieDisplayNums( uint8 * u8NumsToDisplay, uint8 u8Length );
 
@@ -94,7 +60,7 @@ void vDrvNixieDisplayNums( uint8 * u8NumsToDisplay, uint8 u8Length )
   bool boAllValidNumbers = true;
   uint16 i;
   
-  if( u8Length <= eNIXIE_TUBE_COUNT )
+  if( u8Length <= cNIXIE_TUBE_COUNT )
   {
     for( i = 0U; i < u8Length; i++ )
     { 
@@ -137,7 +103,7 @@ void vDrvNixieDisplayNums( uint8 * u8NumsToDisplay, uint8 u8Length )
     Serial.print( "vDrvNixieDisplayNums invalid length. Passed in " );
     Serial.print( u8Length );
     Serial.print( ". Can only display " );
-    Serial.print( (uint8)eNIXIE_TUBE_COUNT );
+    Serial.print( (uint8)cNIXIE_TUBE_COUNT );
     Serial.println( " max" );
   }
   
