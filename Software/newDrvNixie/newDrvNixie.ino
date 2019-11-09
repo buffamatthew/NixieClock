@@ -15,7 +15,8 @@
 #define cNIXIE_TUBE_OFF                   ( 0x0F )
 
 static uint32 gu32LastNumShiftedOut = 0U;
-static uint8 u8NumToDisplay = 0;
+static uint8 u8NumToDisplay = 0U;
+static uint8 u8LastNumDisplayed = 0U;
  
 const char SRCLK = d2; //clock
 const char RCLK = d1; //LATCH
@@ -30,6 +31,8 @@ void setup()
   pinMode( SER, OUTPUT );
   
   Serial.begin( 115200 );
+  pinMode( d9, INPUT );
+  randomSeed( analogRead( d9 ) );
   // put your setup code here, to run once:
 }
 
@@ -49,10 +52,15 @@ void loop()
       Serial.println( u8NumToDisplay );
     }
   }*/
+  while( u8LastNumDisplayed == u8NumToDisplay )
+  {
+    u8NumToDisplay = random( 0U, 9U );
+  }
   
   vDrvNixieDisplayNums( (uint8 *)&u8NumToDisplay, 1U );
-  u8NumToDisplay = ( ( u8NumToDisplay + 1U ) % ( cNIXIE_HIGHEST_DISPLAYABLE_NUMBER + 1U ) );
-  delay(50);
+  u8LastNumDisplayed = u8NumToDisplay;
+  //u8NumToDisplay = ( ( u8NumToDisplay + 1U ) % ( cNIXIE_HIGHEST_DISPLAYABLE_NUMBER + 1U ) );
+  delay(250);
 }
 
 void vDrvNixieDisplayNums( uint8 * u8NumsToDisplay, uint8 u8Length )
@@ -91,7 +99,7 @@ void vDrvNixieDisplayNums( uint8 * u8NumsToDisplay, uint8 u8Length )
         }
         else
         {
-          shiftOut( SER, SRCLK, LSBFIRST, u8NumsToDisplay[i] ); // shift an F to the nixie tube, it won't output anything
+          shiftOut( SER, SRCLK, LSBFIRST, ( 0x0F & u8NumsToDisplay[i] ) );
         }
       }
       
