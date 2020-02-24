@@ -88,6 +88,7 @@ typedef enum eNixieTube
 
 void setup() 
 {
+  unsigned char u8RetryCount = 5;
   pinMode(RCLK,OUTPUT);
   pinMode(SRCLK,OUTPUT);
   pinMode(SER,OUTPUT);
@@ -107,9 +108,17 @@ void setup()
   
   Serial.print("Connecting");
 
-  while( WiFi.status() != WL_CONNECTED ){
+
+  
+  while( ( WiFi.status() != WL_CONNECTED ) && ( 0 != u8RetryCount ) ){
+      u8RetryCount--;
       Serial.print(".");
       startupAnimation();
+  }
+
+  if( 0 == u8RetryCount )
+  {
+    testMode();
   }
 
   //Serial.println();
@@ -132,44 +141,77 @@ void setup()
 void loop() 
 {
   unsigned int i = 0;
-  
-  time_t now = time(nullptr);
-  p_tm = localtime(&now);
-  
-  currentSec = p_tm->tm_sec;
 
-  if (p_tm->tm_year + 1900 != 1970)
+  if( Serial.available() == 0 )
   {
+    time_t now = time(nullptr);
+    p_tm = localtime(&now);
+  
+    currentSec = p_tm->tm_sec;
+
+    if (p_tm->tm_year + 1900 != 1970)
+    {
       if (lastSecPrinted != currentSec)
       {
-      setTimeStamp();
-      updateNixies();
-  
-      Serial.print(currentTimeStamp[0]-0x30,HEX);
-      Serial.print(currentTimeStamp[1]-0x30,HEX);
-      Serial.print(currentTimeStamp[2]-0x30,HEX);
-      Serial.print(currentTimeStamp[3]-0x30,HEX);
-      Serial.print(currentTimeStamp[4]-0x30,HEX);
-      Serial.println(currentTimeStamp[5]-0x30,HEX);
-      
-      lastSecPrinted = currentSec;
-  
+        setTimeStamp();
+        updateNixies();
+    
+        Serial.print(currentTimeStamp[0]-0x30,HEX);
+        Serial.print(currentTimeStamp[1]-0x30,HEX);
+        Serial.print(currentTimeStamp[2]-0x30,HEX);
+        Serial.print(currentTimeStamp[3]-0x30,HEX);
+        Serial.print(currentTimeStamp[4]-0x30,HEX);
+        Serial.println(currentTimeStamp[5]-0x30,HEX);
+        
+        lastSecPrinted = currentSec;
+    
         for (i = 0; i < NUM_OF_NIXIE; i++)
         {
           lastTimeStamp[i] = currentTimeStamp[i];
         }
       }
-      else //will run very fast, might want to add a delay so it's not grabbing a time stamp so fast that not even a second has passed
-      {
-        if(LAMP_TEST_REQUESTED)
-        {
-          lampTest();
-        }
-      }
+    }
+    else
+    {
+      startupAnimation();
+    }
   }
   else
   {
-    startupAnimation();
+    if( ( 't' == Serial.read() ) || ( 'T' == Serial.read() ) )
+    {
+      testMode();
+    }
+  }
+}
+
+void testMode(void)
+{
+  unsigned int i;
+  unsigned char readChar;
+  Serial.println("Now in test mode");
+  
+  for(;;)
+  {
+    readChar = (Serial.read());
+    
+    if( ( readChar > '0' ) && ( readChar < '9' ) )
+    {
+      Serial.println(readChar);
+      digitalWrite(RCLK,LOW);
+      
+      for (i = 0; i < 6; i++)1
+      {              
+        shiftOut(SER,SRCLK,LSBFIRST,((readChar -0x30)&0xFF0000)>>16);
+        shiftOut(SER,SRCLK,LSBFIRST,((readChar -0x30)&0x00FF00)>>8);
+        shiftOut(SER,SRCLK,LSBFIRST,(readChar -0x30));
+      }
+      
+      digitalWrite(RCLK,HIGH);
+      Serial.println("------------------");
+    }
+    
+    delay(5);
   }
 }
 
